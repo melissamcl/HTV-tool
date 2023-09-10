@@ -6,10 +6,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    bundle: path.resolve(__dirname, 'src/index.tsx'),
+    bundle: path.resolve(__dirname, 'client/src/index.tsx'),
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'client/dist'),
     filename: '[name][contenthash].js',
     clean: true,
     assetModuleFilename: '[name][ext]',
@@ -17,7 +17,7 @@ module.exports = {
   devtool: 'source-map',
   devServer: {
     static: {
-      directory: path.resolve(__dirname, 'dist'),
+      directory: path.resolve(__dirname, 'client/dist'),
     },
     port: 8080,
     open: true,
@@ -54,7 +54,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'HTV Tool',
       filename: 'index.html',
-      template: 'index.html',
+      template: path.resolve(__dirname, 'client/public/index.html'),
     }),
     // new BundleAnalyzerPlugin(),
   ],

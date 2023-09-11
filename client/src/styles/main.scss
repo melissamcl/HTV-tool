@@ -1,6 +1,74 @@
-$primary-color: #2cacd0;
-$secondary-color: #f4f4f4;
+// @import url('https://fonts.googleapis.com/css2?family=Aleo:wght@300&family=Recursive:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@300&family=Dosis:wght@200&family=Recursive:wght@300;400&display=swap');
+
+// font variables
+$sans-serif: 'Recursive', sans-serif;
+$button-font: 'Recursive', sans-serif;
+$serif: 'Aleo', serif;
+
+// color variables
+$primary-bg-light: #fceadeff;
+$emphasis-light: #69a2b0ff;
+$light-mode-text: #121212;
+
+$primary-bg-dark: #2c2629;
+$emphasis-dark: #ff8a5bff;
+$dark-mode-text: #f4f4f4;
+
+$button-light-text: #f4f4f4;
+$button-dark-text: #121212;
+
+$moonstone: #69a2b0ff;
+$champagne-pink: #fceadeff;
+$coral: #ff8a5bff;
+$bright-pink-crayola: #ea526fff;
+$wenge: #63535bff;
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $sans-serif;
+}
 
 body {
-  background-color: $primary-color;
+  padding: 0 2rem;
+  font-family: $serif;
+}
+
+button {
+  padding: 0.6rem 1.3rem;
+  border-radius: 0.5rem;
+  border: 0;
+  font-family: $button-font;
+  font-weight: 300;
+  text-transform: lowercase;
+  letter-spacing: 0.1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: $primary-bg-dark;
+    color: $dark-mode-text;
+  }
+
+  button {
+    background-color: $emphasis-dark;
+    color: $button-light-text;
+    box-shadow: 0 3px 20px rgba(157, 157, 157, 0.1);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: $primary-bg-light;
+    color: $light-mode-text;
+  }
+
+  button {
+    background-color: $emphasis-light;
+    color: $button-light-text;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.15);
+  }
 }

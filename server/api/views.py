@@ -1,6 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework import generics
+from .models import HTVColors
+from .serializers import HTVColorsSerializer
 
-# Create your views here.
-def main(request):
-  return HttpResponse('hello world')
+# Return all colors using serializer functionality.
+class HTVColorsView(generics.CreateAPIView):
+  queryset = HTVColors.objects.all() 
+  serializer_class = HTVColorsSerializer

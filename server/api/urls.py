@@ -1,6 +1,8 @@
 from django.urls import path
-from .views import ColorsView
+from .views import HTVColorListView
+
+app_name = 'api'
 
 urlpatterns = [
-    path('colors/', ColorsView.as_view())
+    path('colors/', HTVColorListView.as_view())
 ]

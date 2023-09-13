@@ -1,7 +1,12 @@
 from rest_framework import serializers
-from .models import HTVColors
+from .models import HTVColor
 
-class HTVColorsSerializer(serializers.ModelSerializer):
+class ColorSerializer(serializers.ModelSerializer):
   class Meta:
-    model = HTVColors
-    fields = ('id', 'brand', 'style', 'name', 'hex', 'r', 'g', 'b')
+    model = HTVColor
+    fields = ('id', 'brand', 'style', 'name', 'hex')
+
+class CreateColorSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = HTVColor
+    fields = ('brand', 'style', 'name', 'hex')

@@ -1,7 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const BundleAnalyzerPlugin =
-//   require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   mode: 'development',
@@ -24,6 +22,12 @@ module.exports = {
     hot: true,
     compress: true,
     historyApiFallback: true, // for client-side routing
+    proxy: {
+      '/api': {
+        target: 'http://127.0.0.1:8000',
+        secure: false,
+      },
+    },
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
@@ -60,6 +64,5 @@ module.exports = {
       filename: 'index.html',
       template: path.resolve(__dirname, 'client/public/index.html'),
     }),
-    // new BundleAnalyzerPlugin(),
   ],
 };

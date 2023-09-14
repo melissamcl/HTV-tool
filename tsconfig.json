@@ -6,6 +6,7 @@
     "rootDir": "client/src",
     "strict": true,
     "jsx": "react",
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "esModuleInterop": true
   }
 }

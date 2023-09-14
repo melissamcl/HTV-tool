@@ -1,0 +1,642 @@
+[
+  {
+    "model": "api.HTVColor",
+    "pk": 1,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "White",
+      "hex_code": "#E3DFDC"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 2,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Silver",
+      "hex_code": "#959EA3"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 3,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Gray",
+      "hex_code": "#73797B"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 4,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Charcoal",
+      "hex_code": "#484C56"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 5,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Black",
+      "hex_code": "#26282B"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 6,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Brown",
+      "hex_code": "#3B302D"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 7,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Dark Maroon",
+      "hex_code": "#4A3844"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 8,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Maroon",
+      "hex_code": "#4B2536"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 9,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Burgundy",
+      "hex_code": "#660F2C"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 10,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Red",
+      "hex_code": "#921323"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 11,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Bright Red",
+      "hex_code": "#A42526"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 12,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Hibiscus",
+      "hex_code": "#B43F3E"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 13,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Cardinal",
+      "hex_code": "#71222D"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 14,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Texas Orange",
+      "hex_code": "#9B331D"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 15,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Orange",
+      "hex_code": "#BE401A"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 16,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Orange Soda",
+      "hex_code": "#C14C01"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 17,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Mustard",
+      "hex_code": "#A6740D"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 18,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Sun",
+      "hex_code": "#CE8601"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 19,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Yellow",
+      "hex_code": "#E09F01"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 20,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Lemon",
+      "hex_code": "#D9C301"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 21,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Gold",
+      "hex_code": "#A58840"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 22,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Vegas Gold",
+      "hex_code": "#AE9D70"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 23,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Cream",
+      "hex_code": "#D9C48F"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 24,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Light Apricot",
+      "hex_code": "#D6B389"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 25,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Cashew",
+      "hex_code": "#B49575"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 26,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Tan",
+      "hex_code": "#B49575"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 27,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Latte",
+      "hex_code": "#B49575"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 28,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Hazelnut",
+      "hex_code": "#9B715A"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 29,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Chocolate",
+      "hex_code": "#624D40"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 30,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Mocha",
+      "hex_code": "#513729"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 31,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Lime",
+      "hex_code": "#82B019"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 32,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Green Apple",
+      "hex_code": "#588B40"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 33,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Green",
+      "hex_code": "#265541"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 34,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Cadette Green",
+      "hex_code": "#556A4C"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 35,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Sage",
+      "hex_code": "#9FB48D"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 36,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Green Olive",
+      "hex_code": "#657050"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 37,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Dark Green",
+      "hex_code": "#364543"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 38,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Retro Mint",
+      "hex_code": "#60B8AC"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 39,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Turquoise",
+      "hex_code": "#36505D"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 40,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Powder Blue",
+      "hex_code": "#9CB2B8"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 41,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Sky Blue",
+      "hex_code": "#2B649A"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 42,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Pale Blue",
+      "hex_code": "#8BAEC6"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 43,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Periwinkle",
+      "hex_code": "#9BA3C1"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 44,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Royal Blue",
+      "hex_code": "#394979"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 45,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Navy Blue",
+      "hex_code": "#3D4249"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 46,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Purple",
+      "hex_code": "#3F3A4E"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 47,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Wicked Purple",
+      "hex_code": "#5B4C6C"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 48,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Lilac",
+      "hex_code": "#AB89A0"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 49,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Passion Pink",
+      "hex_code": "#D32365"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 50,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Pink",
+      "hex_code": "#B14560"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 51,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Bubblegum",
+      "hex_code": "#C9758D"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 52,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Flamingo",
+      "hex_code": "#D8868C"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 53,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Melon",
+      "hex_code": "#CC695A"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 54,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Pale Peach",
+      "hex_code": "#D6A782"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 55,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Light Pink",
+      "hex_code": "#D8978B"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 56,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Fluorescent Pink",
+      "hex_code": "#FE157C"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 57,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Fluorescent Raspberry",
+      "hex_code": "#EE0369"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 58,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Fluorescent Coral",
+      "hex_code": "#E81A2D"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 59,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Fluorescent Orange",
+      "hex_code": "#FE5001"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 60,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Fluorescent Yellow",
+      "hex_code": "#D4DE01"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 61,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Fluorescent Green",
+      "hex_code": "#28BC0D"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 62,
+    "fields": {
+      "brand": "Siser",
+      "style": "Easyweed",
+      "name": "Fluorescent Blue",
+      "hex_code": "#05549D"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 63,
+    "fields": {
+      "brand": "Siser",
+      "style": "Glitter",
+      "name": "White",
+      "hex_code": "#D3D6C4"
+    }
+  },
+  {
+    "model": "api.HTVColor",
+    "pk": 64,
+    "fields": {
+      "brand": "Siser",
+      "style": "Glitter",
+      "name": "Red",
+      "hex_code": "#BD2537"
+    }
+  }
+]

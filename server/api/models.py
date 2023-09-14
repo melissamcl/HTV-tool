@@ -14,7 +14,7 @@ class HTVColor(models.Model):
     brand = models.CharField(max_length=50, verbose_name='Brand', help_text='Brand name')
     style = models.CharField(max_length=50, verbose_name='Style', help_text='Style description')
     name = models.CharField(max_length=50, verbose_name='Color Name', help_text='Color name')
-    hex = models.CharField(
+    hex_code = models.CharField(
         max_length=7,
         validators=[hex_code_validator],
         verbose_name='Hex Color Code',

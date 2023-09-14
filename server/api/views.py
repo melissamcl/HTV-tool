@@ -15,7 +15,7 @@ class HTVColorSimilarityView(generics.ListAPIView):
   serializer_class = HTVColorSerializer
 
   def get_queryset(self):
-    input_hex = self.request.query_params.get('hex','')
+    input_hex = self.request.query_params.get('hex_code','')
     # TODO: figure out best logic or tool for color matching and implement
     queryset = HTVColor.objects.all()
     return queryset[0]
@@ -31,9 +31,9 @@ class HTVColorCreateView(generics.CreateAPIView):
       brand = serializer.validated_data.get('brand')
       style = serializer.validated_data.get('style')
       name = serializer.validated_data.get('name')
-      hex = serializer.validated_data.get('hex')
+      hex_code = serializer.validated_data.get('hex_code')
 
-      input_color = HTVColor(brand=brand, style=style, name=name, hex=hex)
+      input_color = HTVColor(brand=brand, style=style, name=name, hex_code=hex_code)
       input_color.save()
 
       return Response(HTVColorSerializer(input_color).data, status=status.HTTP_201_CREATED)

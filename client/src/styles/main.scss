@@ -49,7 +49,6 @@ h4,
 h5 {
   font-family: $sans-serif;
   max-width: 80vw;
-  padding: 0 3vw;
   box-sizing: border-box;
 }
 h1 {
@@ -103,48 +102,48 @@ button {
   color: $light-text;
 }
 
-.container {
-  padding: 0 2.5vw;
-  display: flex;
-  justify-content: center;
+.outer-container {
+  padding: 0 3vw;
 
-  .content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 7.2vw);
-    gap: 1vw;
-    width: 90vw;
-    padding: 2.5vw;
-    height: auto;
-    border-radius: 2.5rem;
+  .inner-container {
+    .content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 7.2vw);
+      gap: 1vw;
+      width: 90vw;
+      padding: 2.5vw;
+      height: auto;
+      border-radius: 2.5rem;
 
-    .color-circles {
-      width: 100%;
-      padding-bottom: 100%;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      .color-circles {
+        width: 100%;
+        padding-bottom: 100%;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-      // &:hover {
-      //   width: 6rem;
-      //   height: 6rem;
-      // }
+        // &:hover {
+        //   width: 6rem;
+        //   height: 6rem;
+        // }
 
-      span {
-        display: none;
+        span {
+          display: none;
+        }
+
+        // &:hover span {
+        //   display: flex;
+        //   text-align: center;
+        //   justify-content: center;
+        //   align-items: center;
+        //   font-size: 65%;
+        //   width: 70%;
+        //   height: 70%;
+        //   padding: 15%;
+        //   border: 1px solid;
+        // }
       }
-
-      // &:hover span {
-      //   display: flex;
-      //   text-align: center;
-      //   justify-content: center;
-      //   align-items: center;
-      //   font-size: 65%;
-      //   width: 70%;
-      //   height: 70%;
-      //   padding: 15%;
-      //   border: 1px solid;
-      // }
     }
   }
 }
@@ -170,16 +169,18 @@ button {
     box-shadow: $shadow-subtle-darkmode;
   }
 
-  .container {
-    .content {
-      background-color: $content-bg-darkmode;
-      box-shadow: $shadow-subtle-darkmode;
+  .outer-container {
+    .inner-container {
+      .content {
+        background-color: $content-bg-darkmode;
+        box-shadow: $shadow-subtle-darkmode;
 
-      .color-circles {
-        box-shadow: $border-shadow-darkmode, $shadow-subtle-darkmode;
+        .color-circles {
+          box-shadow: $border-shadow-darkmode, $shadow-subtle-darkmode;
 
-        &:hover {
-          box-shadow: $border-shadow-darkmode, $shadow-prominent-darkmode;
+          &:hover {
+            box-shadow: $border-shadow-darkmode, $shadow-prominent-darkmode;
+          }
         }
       }
     }
@@ -206,16 +207,17 @@ button {
     box-shadow: $shadow-subtle-lightmode;
   }
 
-  .container {
-    .content {
-      background-color: $content-bg-lightmode;
-      box-shadow: $shadow-subtle-lightmode;
+  .outer-container {
+    .inner-container {
+      .content {
+        background-color: $content-bg-lightmode;
+        box-shadow: $shadow-subtle-lightmode;
+        .color-circles {
+          box-shadow: $border-shadow-lightmode, $shadow-subtle-lightmode;
 
-      .color-circles {
-        box-shadow: $border-shadow-lightmode, $shadow-subtle-lightmode;
-
-        &:hover {
-          box-shadow: $border-shadow-lightmode, $shadow-prominent-lightmode;
+          &:hover {
+            box-shadow: $border-shadow-lightmode, $shadow-prominent-lightmode;
+          }
         }
       }
     }

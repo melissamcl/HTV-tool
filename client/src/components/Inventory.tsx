@@ -12,6 +12,7 @@ interface HTVColor {
 function Inventory() {
   // TODO: add filtering options and separators by brand/style
   const [HTVColors, setHTVColors] = useState<HTVColor[]>([]);
+  const [groupedColors, setGroupedColors] = useState<HTVColor[][]>([]);
 
   // Function to determine text color based on background brightness
   const getTextColor = (backgroundColor: string): string => {
@@ -25,6 +26,26 @@ function Inventory() {
 
     // Use a threshold to determine if text should be light or dark
     return luminance > 0.5 ? 'dark-text' : 'light-text';
+  };
+
+  // Function to populate groupedColors by grouping HTVColors by brand/style
+  const groupColors = (): void => {
+    const result: {
+      [key: string]: HTVColor[];
+    } = {};
+
+    // For each color in HTVColors ojb:
+    // If color's brand and style has already been added to result obj, push color into corresponding array
+    // Else add brand/style to result obj with value set to array containing color
+    for (let color of HTVColors) {
+      if (`${color.brand} ${color.style}` in result) {
+        result[`${color.brand} ${color.style}`].push(color);
+      } else {
+        result[`${color.brand} ${color.style}`] = [color];
+      }
+    }
+
+    setGroupedColors(Object.values(result));
   };
 
   // On component mount, get all colors from db and update HTVColors state
@@ -42,27 +63,32 @@ function Inventory() {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    groupColors();
+  }, [HTVColors]);
+
   return (
-    <div>
+    <div className="outer-container">
       <h1>Inventory</h1>
-      {/* <h2>Test h2</h2>
-      <h3>Test h3</h3>
-      <h4>Test h4</h4>
-      <h5>Test h5</h5> */}
-      <div className="container">
-        <div className="content">
-          {HTVColors.map((color, i) => (
-            <div
-              key={color.id}
-              className={`color-circles ${getTextColor(color.hex_code)}`}
-              style={{
-                backgroundColor: color.hex_code,
-              }}
-            >
-              <span>{color.name}</span>
+      <div className="inner-container">
+        {groupedColors.map((group) => (
+          <>
+            <h2>{`${group[0].brand} ${group[0].style}`}</h2>
+            <div className="content">
+              {group.map((color) => (
+                <div
+                  key={color.id}
+                  className={`color-circles ${getTextColor(color.hex_code)}`}
+                  style={{
+                    backgroundColor: color.hex_code,
+                  }}
+                >
+                  <span>{color.name}</span>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </>
+        ))}
       </div>
     </div>
   );

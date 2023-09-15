@@ -12,7 +12,7 @@ $champagne-pink: #fceade;
 $isabelline: #faf4f0;
 $coral: #ff8a5b;
 $bright-pink-crayola: #ea526f;
-$wenge: #63535b;
+$van-dyke: #42383d;
 $raisin-black: #2c2629;
 
 // explicitly light/dark colors
@@ -21,19 +21,24 @@ $light-text: #f4f4f4;
 
 // light mode styles
 $primary-bg-lightmode: $isabelline;
+$content-bg-lightmode: $champagne-pink;
 $emphasis-lightmode: $moonstone;
 $primary-text-lightmode: $dark-text;
 $button-text-lightmode: $light-text;
 $shadow-subtle-lightmode: 0 0 6px rgba(40, 40, 40, 0.2);
 $shadow-prominent-lightmode: 0 0 12px rgba(0, 0, 0, 0.3);
+$border-shadow-lightmode: 0 0 0.5px rgb(71, 71, 71);
 
 // dark mode styles
 $primary-bg-darkmode: $raisin-black;
+$content-bg-darkmode: $van-dyke;
 $emphasis-darkmode: $coral;
 $primary-text-darkmode: $light-text;
 $button-text-darkmode: $dark-text;
 $shadow-subtle-darkmode: 0 0 6px rgba(70, 70, 70, 0.2);
 $shadow-prominent-darkmode: 0 0 12px rgba(120, 120, 120, 0.3);
+$border-shadow-darkmode: 0 0 1px rgb(163, 163, 163);
+
 // #endregion
 
 // #region Heading tags
@@ -105,13 +110,11 @@ button {
 
   .content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 6vw);
+    grid-template-columns: repeat(auto-fit, 7.2vw);
     gap: 1vw;
     width: 90vw;
     padding: 2.5vw;
     height: auto;
-    background-color: $champagne-pink;
-    box-shadow: $shadow-subtle-lightmode;
     border-radius: 2.5rem;
 
     .color-circles {
@@ -167,11 +170,18 @@ button {
     box-shadow: $shadow-subtle-darkmode;
   }
 
-  .color-circles {
-    box-shadow: $shadow-subtle-darkmode;
+  .container {
+    .content {
+      background-color: $content-bg-darkmode;
+      box-shadow: $shadow-subtle-darkmode;
 
-    &:hover {
-      box-shadow: $shadow-prominent-darkmode;
+      .color-circles {
+        box-shadow: $border-shadow-darkmode, $shadow-subtle-darkmode;
+
+        &:hover {
+          box-shadow: $border-shadow-darkmode, $shadow-prominent-darkmode;
+        }
+      }
     }
   }
 }
@@ -196,11 +206,18 @@ button {
     box-shadow: $shadow-subtle-lightmode;
   }
 
-  .color-circles {
-    box-shadow: $shadow-subtle-lightmode;
+  .container {
+    .content {
+      background-color: $content-bg-lightmode;
+      box-shadow: $shadow-subtle-lightmode;
 
-    &:hover {
-      box-shadow: $shadow-prominent-lightmode;
+      .color-circles {
+        box-shadow: $border-shadow-lightmode, $shadow-subtle-lightmode;
+
+        &:hover {
+          box-shadow: $border-shadow-lightmode, $shadow-prominent-lightmode;
+        }
+      }
     }
   }
 }

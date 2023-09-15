@@ -45,18 +45,24 @@ function Inventory() {
   return (
     <div>
       <h1>Inventory</h1>
-      <div className="content">
-        {HTVColors.map((color, i) => (
-          <div
-            key={color.id}
-            className={`color-circles ${getTextColor(color.hex_code)}`}
-            style={{
-              backgroundColor: color.hex_code,
-            }}
-          >
-            <span>{color.name}</span>
-          </div>
-        ))}
+      {/* <h2>Test h2</h2>
+      <h3>Test h3</h3>
+      <h4>Test h4</h4>
+      <h5>Test h5</h5> */}
+      <div className="container">
+        <div className="content">
+          {HTVColors.map((color, i) => (
+            <div
+              key={color.id}
+              className={`color-circles ${getTextColor(color.hex_code)}`}
+              style={{
+                backgroundColor: color.hex_code,
+              }}
+            >
+              <span>{color.name}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

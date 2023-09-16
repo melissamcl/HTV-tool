@@ -2,11 +2,12 @@
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
-    "outDir": "client/dist",
-    "rootDir": "client/src",
+    "outDir": "dist",
+    "rootDir": "src",
     "strict": true,
     "jsx": "react",
     "noImplicitAny": true,
     "esModuleInterop": true
-  }
+  },
+  "include": ["src/**/*", "typings.d.ts"]
 }

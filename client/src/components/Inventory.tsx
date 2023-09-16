@@ -1,32 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/main.scss';
-
-interface HTVColor {
-  id: number;
-  brand: string;
-  style: string;
-  name: string;
-  hex_code: string;
-}
+import { HTVColor } from '../../typings';
+import ColorCircle from './ColorCircles';
 
 function Inventory() {
   // TODO: add filtering options and separators by brand/style
+  // TODO: make content overlay functional or remove it (to make selected color more prominent)
   const [HTVColors, setHTVColors] = useState<HTVColor[]>([]);
   const [groupedColors, setGroupedColors] = useState<HTVColor[][]>([]);
-
-  // Function to determine text color based on background brightness
-  const getTextColor = (backgroundColor: string): string => {
-    // Convert the background color to its RGB components
-    const r = parseInt(backgroundColor.substring(1, 3), 16);
-    const g = parseInt(backgroundColor.substring(3, 5), 16);
-    const b = parseInt(backgroundColor.substring(5, 7), 16);
-
-    // Calculate the relative luminance using the formula for sRGB
-    const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-
-    // Use a threshold to determine if text should be light or dark
-    return luminance > 0.5 ? 'dark-text' : 'light-text';
-  };
+  const [activeCircle, setActiveCircle] = useState<number>(0);
+  const [contentOverlay, setContentOverlay] = useState<React.ReactElement>(
+    <></>
+  );
 
   // Function to populate groupedColors by grouping HTVColors by brand/style
   const groupColors = (): void => {
@@ -48,7 +33,49 @@ function Inventory() {
     setGroupedColors(Object.values(result));
   };
 
-  // On component mount, get all colors from db and update HTVColors state
+  // Function to activate selected color circle
+  const handleCircleClick = (e: React.MouseEvent<HTMLElement>): void => {
+    // Initialize element, representing clicked element
+    const element = e.target as HTMLElement;
+
+    // Initialize circle as clicked element, possibly to be changed if circle was not clicked
+    let circle = element as HTMLElement;
+
+    // Starting at clicked element, traverse up the DOM until root is reached or color-circle is found
+    let classNames = circle.className.split(' ');
+    while (true) {
+      if (!classNames.includes('color-circle')) {
+        console.log(circle);
+
+        if (circle.parentElement !== null) {
+          circle = circle.parentElement;
+          classNames = circle.className.split(' ');
+        } else {
+          setActiveCircle(0);
+          break;
+        }
+      } else {
+        break;
+      }
+    }
+
+    // With resulting element, if there is no primary key (pk) attribute, set active circle to 0 (none)
+    const pk = circle.getAttribute('pk');
+    if (pk === null) {
+      setActiveCircle(0);
+      return;
+    }
+
+    // If the circle that was clicked is already active, deactivate it.
+    // Otherwise activate the clicked circle
+    if (activeCircle === parseInt(pk)) {
+      setActiveCircle(0);
+    } else {
+      setActiveCircle(parseInt(pk));
+    }
+  };
+
+  // On component mount, get all colors from db, update HTVColors state
   useEffect(() => {
     async function fetchData() {
       try {
@@ -63,12 +90,21 @@ function Inventory() {
     fetchData();
   }, []);
 
+  // Run functions/set states that are dependent on HTVColors
   useEffect(() => {
     groupColors();
   }, [HTVColors]);
 
+  useEffect(() => {
+    if (activeCircle > 0) {
+      setContentOverlay(<div className="content-overlay"></div>);
+    } else {
+      setContentOverlay(<></>);
+    }
+  }, [activeCircle]);
+
   return (
-    <div className="outer-container">
+    <div className="outer-container" onClick={handleCircleClick}>
       <h1>Inventory</h1>
       <div className="inner-container">
         {groupedColors.map((group) => (
@@ -76,17 +112,14 @@ function Inventory() {
             <h2>{`${group[0].brand} ${group[0].style}`}</h2>
             <div className="content">
               {group.map((color) => (
-                <div
-                  key={color.id}
-                  className={`color-circles ${getTextColor(color.hex_code)}`}
-                  style={{
-                    backgroundColor: color.hex_code,
-                  }}
-                >
-                  <span>{color.name}</span>
-                </div>
+                <ColorCircle
+                  color={color}
+                  onClick={handleCircleClick}
+                  isActive={color.id === activeCircle}
+                />
               ))}
             </div>
+            {contentOverlay}
           </>
         ))}
       </div>

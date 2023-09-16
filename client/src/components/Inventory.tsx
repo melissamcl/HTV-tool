@@ -111,13 +111,15 @@ function Inventory() {
           <>
             <h2>{`${group[0].brand} ${group[0].style}`}</h2>
             <div className="content">
-              {group.map((color) => (
-                <ColorCircle
-                  color={color}
-                  onClick={handleCircleClick}
-                  isActive={color.id === activeCircle}
-                />
-              ))}
+              <div className="content-inventory">
+                {group.map((color) => (
+                  <ColorCircle
+                    color={color}
+                    onClick={handleCircleClick}
+                    isActive={color.id === activeCircle}
+                  />
+                ))}
+              </div>
             </div>
             {contentOverlay}
           </>

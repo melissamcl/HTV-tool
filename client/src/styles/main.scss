@@ -53,27 +53,27 @@ h5 {
 }
 h1 {
   font-size: 2.5rem;
-  line-height: 1.2;
+  line-height: 1;
 }
 
 h2 {
   font-size: 2rem;
-  line-height: 1.3;
+  line-height: 1.1;
 }
 
 h3 {
   font-size: 1.5rem;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 h4 {
   font-size: 1.25rem;
-  line-height: 1.5;
+  line-height: 1.3;
 }
 
 h5 {
   font-size: 1.125rem;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 // #endregion
@@ -92,6 +92,7 @@ button {
   font-weight: 300;
   text-transform: lowercase;
   letter-spacing: 0.1rem;
+  display: block;
 }
 
 .dark-text {
@@ -103,100 +104,108 @@ button {
 }
 
 .outer-container {
-  padding: 0 3vw;
+  padding: 0 3vw 3vw;
 
   .inner-container {
+    width: 94vw;
+    padding: 0.1rem 2vw 2vw;
+    height: auto;
+    border-radius: 2rem;
+    box-sizing: border-box;
+
     .content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, 6vw);
-      gap: 1vw;
-      width: 90vw;
-      padding: 2.5vw;
-      height: auto;
-      border-radius: 2.5rem;
+      // #region Inventory styles
+      .content-inventory {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 6vw);
+        gap: 1vw;
 
-      .circle-container {
-        position: relative;
+        .circle-container {
+          position: relative;
 
-        .color-circle {
-          width: 100%;
-          padding: 50% 0;
-          border-radius: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          .color-details-container {
-            position: absolute;
+          .color-circle {
             width: 100%;
-          }
-
-          .color-name {
-            display: none;
-            user-select: none;
-          }
-
-          &:hover .color-name {
-            font-family: $sans-serif;
-            line-height: 0.9;
+            padding: 50% 0;
+            border-radius: 50%;
             display: flex;
-            text-align: center;
             justify-content: center;
             align-items: center;
-            font-size: 1rem;
-            width: 100%;
-          }
 
-          .selected-color-details {
-            display: none;
-          }
-        }
-
-        .active-color-circle {
-          position: absolute;
-          z-index: 9999;
-          width: 9vw;
-          padding-bottom: 9vw;
-          top: -1.5vw; // center on existing circle (width - non-selected circle width / 2)
-          left: -1.5vw;
-          border-radius: 50%;
-
-          .color-details-container {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: top;
-            align-items: center;
-            padding-top: 25%;
-            box-sizing: border-box;
-            border-radius: 50%;
-            overflow: hidden;
+            .color-details-container {
+              position: absolute;
+              width: 100%;
+            }
 
             .color-name {
+              display: none;
+              user-select: none;
+            }
+
+            &:hover .color-name {
               font-family: $sans-serif;
               line-height: 0.9;
-              width: 70%;
+              display: flex;
               text-align: center;
-              font-size: 90%;
+              justify-content: center;
+              align-items: center;
+              font-size: 1rem;
+              width: 100%;
             }
 
             .selected-color-details {
-              width: 80%;
-              text-align: center;
-              font-size: 0.8rem;
-              line-height: 1;
-              margin-top: 0.4rem;
+              display: none;
+            }
+          }
+
+          .active-color-circle {
+            position: absolute;
+            z-index: 9999;
+            width: 9vw;
+            padding-bottom: 9vw;
+            top: -1.5vw; // center on existing circle (width - non-selected circle width / 2)
+            left: -1.5vw;
+            border-radius: 50%;
+
+            .color-details-container {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: top;
+              align-items: center;
+              padding-top: 25%;
+              box-sizing: border-box;
+              border-radius: 50%;
+              overflow: hidden;
+
+              .color-name {
+                font-family: $sans-serif;
+                line-height: 0.9;
+                width: 70%;
+                text-align: center;
+                font-size: 90%;
+              }
+
+              .selected-color-details {
+                width: 80%;
+                text-align: center;
+                font-size: 0.8rem;
+                line-height: 1;
+                margin-top: 0.4rem;
+              }
             }
           }
         }
       }
-    }
+      // #endregion
 
-    .content-overlay {
-      background-color: $content-bg-lightmode;
-      z-index: 9999;
+      .content-new-upload {
+        .file-input {
+          display: block;
+          margin-bottom: 0.5rem;
+        }
+      }
     }
   }
 }
@@ -224,10 +233,9 @@ button {
 
   .outer-container {
     .inner-container {
+      background-color: $content-bg-darkmode;
+      box-shadow: $shadow-subtle-darkmode;
       .content {
-        background-color: $content-bg-darkmode;
-        box-shadow: $shadow-subtle-darkmode;
-
         .circle-container {
           .color-circle {
             box-shadow: $border-shadow-darkmode, $shadow-subtle-darkmode;
@@ -268,10 +276,9 @@ button {
 
   .outer-container {
     .inner-container {
+      background-color: $content-bg-lightmode;
+      box-shadow: $shadow-subtle-lightmode;
       .content {
-        background-color: $content-bg-lightmode;
-        box-shadow: $shadow-subtle-lightmode;
-
         .circle-container {
           .color-circle {
             box-shadow: $border-shadow-lightmode, $shadow-subtle-lightmode;
